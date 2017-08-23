@@ -29,6 +29,32 @@ using namespace std;
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int len = nums1.size() + nums2.size();
+        if(len & 0x1){
+            return findkth(nums1,nums2,len/2+1);
+        }else{
+            return (findkth(nums1,nums2,len/2) + findkth(nums1,nums2,len/2 +1))/2.0;
+        }
+    }
 
+    int findkth(vector<int> nums1,vector<int> nums2,int k){
+        int size1 = nums1.size();
+        int size2 = nums2.size();
+        if(size1>size2) return findkth(nums2,nums1,k);
+        if(size1 == 0) return nums2[k-1];
+        if(k == 1) return min(nums1[0],nums2[0]);
+
+        int part1 = min(k/2,size1),part2 = k-part1;
+        if(nums1[part1-1] > nums2[part2-1]) {
+            vector<int> tmp;
+            tmp.insert(tmp.begin(),nums2.begin()+part2,nums2.end());
+            return findkth(nums1,tmp,k-part2);
+        }else if(nums1[part1-1] < nums2[part2-1]){
+            vector<int> tmp;
+            tmp.insert(tmp.begin(),nums1.begin()+part1,nums1.end());
+            return findkth(tmp,nums2,k-part1);
+        }else{
+            return nums1[part1-1];
+        }
     }
 };
