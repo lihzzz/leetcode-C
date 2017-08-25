@@ -5,7 +5,7 @@
 using namespace std;
 int main() {
     Solution sl;
-    string str = "absdfba";
+    string str = "babad";
     cout << sl.longestPalindrome(str);
     return 0;
 }

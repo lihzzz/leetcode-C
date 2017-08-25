@@ -2,6 +2,7 @@
 // Created by lh on 2017/8/23.
 //
 #include <string>
+#include <cstring>
 #include <algorithm>
 using namespace std;
 
@@ -43,7 +44,7 @@ using namespace std;
 //    }
 //};
 
-
+//o(n^2)
 class Solution {
 public:
     int* next;
@@ -118,3 +119,51 @@ public:
         return res;
     }
 };
+
+
+
+//class Solution {
+//public:
+//    int longstr = 0;
+//    char *Initstr(string s){
+//        int oldlen = s.length();
+//        int count = 0;
+//        int newlen = (oldlen << 1) + 3;
+//        char* newstr = new char[newlen];
+//        newstr[count ++] = '$';
+//        for (int i = 0; i <oldlen ; ++i) {
+//            newstr[count++] = '#';
+//            newstr[count++] = s[i];
+//        }
+//        newstr[count++] = '#';
+//        newstr[count] = '\0';
+//        return newstr;
+//    }
+//    string longestPalindrome(string s) {
+//        int oldlen = s.length();
+//        if (oldlen == 0) return "";
+//        char* newstr = Initstr(s);
+//        int newlen = strlen(newstr);
+//        int* p = new int[newlen];
+//        memset(p,0, sizeof(int)*newlen);
+//        int id=1,mx=0;
+//        for (int i = 1; newstr[i]!= '\0' ; ++i) {
+//            if(mx > i){
+//                p[i] = min(p[2*id-i],mx-i);
+//            }else{
+//                p[i] = 1;
+//            }
+//            while(newstr[i+p[i]] == newstr[i-p[i]]){
+//                p[i] ++;
+//            }
+//            int tmp = p[i];
+//            if(p[i] > longstr){
+//               longstr = p[i];
+//                mx = i+p[i]-1;
+//                id = i;
+//            }
+//        }
+//        id = (id-longstr)/2;
+//        return s.substr(id,longstr-1);
+//    }
+//};
