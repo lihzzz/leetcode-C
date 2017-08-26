@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code/5.cpp"
+#include "code/6.cpp"
 using namespace std;
 int main() {
     Solution sl;
-    string str = "babad";
-    cout << sl.longestPalindrome(str);
+    string str = "AB";
+    cout << sl.convert(str,1);
     return 0;
 }

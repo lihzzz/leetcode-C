@@ -2,11 +2,11 @@
 // Created by lh on 2017/8/25.
 //
 
-struct ListNode{
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL){}
-};
+//struct ListNode{
+//    int val;
+//    ListNode *next;
+//    ListNode(int x) : val(x), next(NULL){}
+//};
 //----1---- %30.73
 //class Solution {
 //public:
