@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code/8.cpp"
+#include "code/9.cpp"
 using namespace std;
 int main() {
     Solution sl;
-    cout << sl.myAtoi("  -0012a42");
+    cout << sl.isPalindrome(12344321);
 
     return 0;
 }
