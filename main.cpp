@@ -5,6 +5,6 @@
 using namespace std;
 int main() {
     Solution sl;
-    cout << sl.isMatch("aa","a*");
+    cout << sl.isMatch("aaa","a.*a");
     return 0;
 }
