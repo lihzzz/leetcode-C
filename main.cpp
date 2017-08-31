@@ -5,6 +5,6 @@
 using namespace std;
 int main() {
     Solution sl;
-    cout << sl.isMatch("abefcdgiescdfimde","ab*cd?i*de");
+    cout << sl.isMatch("aaacdacb","a*acd");
     return 0;
 }
