@@ -5,8 +5,8 @@
 using namespace std;
 int main() {
     Solution sl;
-    int coin[] = {474,83,404,3};
+    int coin[] = {1,2,5};
     vector<int> coins(begin(coin),end(coin));
-    cout << sl.coinChange(coins,264);
+    cout << sl.coinChange(coins,11);
     return 0;
 }
