@@ -45,28 +45,49 @@ using namespace std;
 //};
 
 
-class Solution {
+//class Solution {
+//public:
+//    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+//        if(obstacleGrid.empty() || obstacleGrid[0].empty() || obstacleGrid[0][0] == 1)
+//            return 0;
+//        int height = obstacleGrid.size();
+//        int weight = obstacleGrid[0].size();
+//        vector<vector<int> > dp(height, vector<int>(weight, 0));
+//
+//        for (int i = 0; i <height ; ++i) {
+//            for (int j = 0; j <weight ; ++j) {
+//                if(obstacleGrid[i][j] == 1) dp[i][j] = 0;
+//                else if(i==0 && j==0) dp[i][j] = 1;
+//                else if(i==0 && j > 0){
+//                    dp[i][j] = dp[i][j-1];
+//                } else if(i>0 && j==0){
+//                    dp[i][j] = dp[i-1][j];
+//                }else{
+//                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+//                }
+//            }
+//        }
+//        return dp[height-1][weight-1];
+//    }
+//};
+
+class Solution{
 public:
-    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid){
         if(obstacleGrid.empty() || obstacleGrid[0].empty() || obstacleGrid[0][0] == 1)
             return 0;
         int height = obstacleGrid.size();
         int weight = obstacleGrid[0].size();
-        vector<vector<int> > dp(height, vector<int>(weight, 0));
-
+        vector<int> dp(weight,0);
+        dp[0] = 1;
         for (int i = 0; i <height ; ++i) {
             for (int j = 0; j <weight ; ++j) {
-                if(obstacleGrid[i][j] == 1) dp[i][j] = 0;
-                else if(i==0 && j==0) dp[i][j] = 1;
-                else if(i==0 && j > 0){
-                    dp[i][j] = dp[i][j-1];
-                } else if(i>0 && j==0){
-                    dp[i][j] = dp[i-1][j];
-                }else{
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                if(obstacleGrid[i][j] == 1) dp[j] = 0;
+                else if(j> 0){
+                    dp[j] += dp[j-1] ;
                 }
             }
         }
-        return dp[height-1][weight-1];
+        return dp[weight-1];
     }
 };
