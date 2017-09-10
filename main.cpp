@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code/53.cpp"
+#include "code/152.cpp"
 using namespace std;
 int main() {
     Solution sl;
-    int data[] = {1,2};
+    int data[] = {2,-5,-2,-4,3};
     vector<int> nums(begin(data),end(data));
     //nums.push_back(data);
-    cout << sl.maxSubArray(nums);
+    cout << sl.maxProduct(nums);
     return 0;
 }
