@@ -35,7 +35,6 @@ public:
         for (int i = 1; i <nums.size() ; ++i) {
             int a = localmax*nums[i];
             int b = localmin*nums[i];
-
             localmax = max(max(a,b),nums[i]);
             localmin = min(min(a,b),nums[i]);
 
