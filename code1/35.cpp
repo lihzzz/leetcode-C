@@ -2,7 +2,7 @@
 // Created by lh on 2017/9/11.
 //
 #include <vector>
-using std::vector
+using std::vector;
 
 class Solution{
 public:

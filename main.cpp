@@ -1,13 +1,14 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code/152.cpp"
+#include "code1/34.cpp"
 using namespace std;
 int main() {
     Solution sl;
-    int data[] = {2,-5,-2,-4,3};
+    int data[] = {5,7,7,8,8,10};
+    int target = 8;
     vector<int> nums(begin(data),end(data));
     //nums.push_back(data);
-    cout << sl.maxProduct(nums);
+    sl.searchRange(nums,target);
     return 0;
 }
