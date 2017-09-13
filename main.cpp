@@ -1,14 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code1/34.cpp"
+#include "code2/74.cpp"
 using namespace std;
 int main() {
     Solution sl;
-    int data[] = {5,7,7,8,8,10};
+    int data[] = {1};
     int target = 8;
     vector<int> nums(begin(data),end(data));
+    vector<vector<int>> num_2={nums};
     //nums.push_back(data);
-    sl.searchRange(nums,target);
+    cout << sl.searchMatrix(num_2,2);
     return 0;
 }
