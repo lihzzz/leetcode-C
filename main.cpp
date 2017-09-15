@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code2/115.cpp"
+#include "code2/14.cpp"
 using namespace std;
 int main() {
     Solution sl;
@@ -10,7 +10,7 @@ int main() {
 //    vector<int> nums(begin(data),end(data));
 //    vector<vector<int>> num_2={nums};
     //nums.push_back(data);
-    string s = "rabbbit",t="rabbit";
-    cout << sl.numDistinct(s,t);
+    vector<string> strs = {""};
+    cout << sl.longestCommonPrefix(strs);
     return 0;
 }
