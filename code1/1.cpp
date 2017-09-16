@@ -1,6 +1,11 @@
 //
 // Created by lh on 2017/8/25.
 //
+
+#include <vector>
+#include <iostream>
+#include <unordered_map>
+using namespace std;
 // ----1---- %1.39
 //class Solution {
 //public:
@@ -57,22 +62,22 @@
 //};
 
 //----3----%83.27
-//class Solution {
-//public:
-//	vector<int> twoSum(vector<int>& nums, int target) {
-//		unordered_map<int, int> hash;
-//		vector<int> res;
-//		cout << nums.size() << endl;
-//		for (int i = 0; i < nums.size(); i++)
-//		{
-//			int tar = target - nums[i];
-//			if (hash.find(tar) != hash.end()) {
-//				res.push_back(hash[tar] );
-//				res.push_back(i);
-//				break;
-//			}
-//			hash[nums[i]] = i;
-//		}
-//		return res;
-//	}
-//}
+class Solution {
+public:
+	vector<int> twoSum(vector<int>& nums, int target) {
+		unordered_map<int, int> hash;
+		vector<int> res;
+		cout << nums.size() << endl;
+		for (int i = 0; i < nums.size(); i++)
+		{
+			int tar = target - nums[i];
+			if (hash.find(tar) != hash.end()) {
+				res.push_back(hash[tar] );
+				res.push_back(i);
+				break;
+			}
+			hash[nums[i]] = i;
+		}
+		return res;
+	}
+};
