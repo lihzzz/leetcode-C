@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "code2/15.cpp"
+#include "easy/680.cpp"
 using namespace std;
 int main() {
     Solution sl;
@@ -10,8 +10,9 @@ int main() {
     vector<int> nums(begin(data),end(data));
 //    vector<vector<int>> num_2={nums};
     //nums.push_back(data);
-    vector<string> strs = {""};
-    sl.threeSum(nums);
+    //vector<string> strs = {""};
+    string str ="abca";//"aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"; //"eeccccbebaeeabebccceea";
+    cout << sl.validPalindrome(str);
     //cout << sl.twoSum(nums,target);
     return 0;
 }
