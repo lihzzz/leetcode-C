@@ -17,8 +17,6 @@ public:
                 left ++;
                 right --;
             }
-
-            if(s[right])
         }
     }
 };

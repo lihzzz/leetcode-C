@@ -2,6 +2,7 @@
 // Created by lh on 2017/9/17.
 //
 #include <vector>
+#include <iostream>
 using namespace std;
 struct TreeNode {
          int val;
