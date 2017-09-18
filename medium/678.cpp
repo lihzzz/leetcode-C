@@ -7,16 +7,22 @@ using namespace std;
 class Solution {
 public:
     bool checkValidString(string s) {
-        int res;
-        int left = 0 ,right =s.size()-1;
-        while (left <= right){
-            if(s[left]=='*') {
-                res += checkValidString(s.substr(left + 1, right - left));
-                res += checkValidString(s.substr(left + 1,right-left -1));
-            } else if(s[left] =='(' && s[right] ==')'){
-                left ++;
-                right --;
+        int low = 0,high = 0;
+        for (int i = 0; i <s.length() ; ++i) {
+            if(s[i] == '('){
+                low ++;
+                high ++;
+            } else if(s[i] == ')'){
+                low --;
+                high --;
+            } else{
+                if(low > 0)
+                    low --;
+                high ++;
             }
         }
+        if(high < 0)
+            return false;
+        return low == 0;
     }
 };
