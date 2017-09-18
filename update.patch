@@ -1,0 +1,92 @@
+Index: code/6.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code/6.cpp	(revision )
++++ code/6.cpp	(revision )
+@@ -0,0 +1,36 @@
++//
++// Created by lh on 2017/8/26.
++//
++#include<string>
++using namespace std;
++class Solution{
++public:
++    string merge(string* s,int numRows){
++        string res = "";
++        for (int i = 0; i <numRows ; ++i) {
++            res += s[i];
++        }
++        return res;
++    }
++    string convert(string s,int numRows){
++        int len = s.length();
++        if(len <= numRows || numRows == 1)
++            return s;
++        string* res = new string[numRows]();
++        for (int i = 0;;) {
++            int tmp = i +numRows-1 + numRows -1;
++
++            for (int j = 0; j <numRows ; ++j) {
++                if( i >= len)
++                    return merge(res,numRows);
++                res[j] += s[i++];
++            }
++            for (int k = numRows-2; k > 0 ; --k) {
++                if( i>= len)
++                    return merge(res,numRows);
++                res[k] += s[i++];
++            }
++            i =tmp;
++        }
++    }
++};
+\ No newline at end of file
+Index: main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- main.cpp	(revision 86dd65fad55f0c401c40c3e4ed8f2e5ef8d79b4d)
++++ main.cpp	(revision )
+@@ -1,11 +1,11 @@
+ #include <iostream>
+ #include <vector>
+ #include <string>
+-#include "code/5.cpp"
++#include "code/6.cpp"
+ using namespace std;
+ int main() {
+     Solution sl;
+-    string str = "babad";
+-    cout << sl.longestPalindrome(str);
++    string str = "AB";
++    cout << sl.convert(str,1);
+     return 0;
+ }
+\ No newline at end of file
+Index: code/2.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- code/2.cpp	(revision 86dd65fad55f0c401c40c3e4ed8f2e5ef8d79b4d)
++++ code/2.cpp	(revision )
+@@ -2,11 +2,11 @@
+ // Created by lh on 2017/8/25.
+ //
+ 
+-struct ListNode{
+-    int val;
+-    ListNode *next;
+-    ListNode(int x) : val(x), next(NULL){}
+-};
++//struct ListNode{
++//    int val;
++//    ListNode *next;
++//    ListNode(int x) : val(x), next(NULL){}
++//};
+ //----1---- %30.73
+ //class Solution {
+ //public:
