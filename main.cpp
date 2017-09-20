@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "easy/506.cpp"
+#include "easy/409_HashTable.cpp"
 using namespace std;
 int main() {
     Solution sl;
@@ -11,8 +11,8 @@ int main() {
     vector<vector<int>> num_2={{2,3,4},{5,6,7},{8,9,10},{11,12,13},{14,15,16}};
     //nums.push_back(data);
     //vector<string> strs = {""};
-    //string str ="abca";//"aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"; //"eeccccbebaeeabebccceea";
-    sl.findRelativeRanks(nums);
+    string str ="ccc";
+    cout << sl.longestPalindrome(str);
     //cout << sl.twoSum(nums,target);
     return 0;
 }
