@@ -2,7 +2,7 @@
 // Created by lh on 2017/9/19.
 //
 #include <vector>
-using std::vector
+using std::vector;
 
 /*result:m
  * n=nums.size()
