@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "easy/674_Array.cpp"
+#include "easy/551_String.cpp"
 using namespace std;
 int main() {
     Solution sl;
@@ -11,8 +11,8 @@ int main() {
     vector<vector<int>> num_2={{2,3,4},{5,6,7},{8,9,10},{11,12,13},{14,15,16}};
     //nums.push_back(data);
     //vector<string> strs = {""};
-    string str ="ccc";
-    cout << sl.findLengthOfLCIS(nums);
+    string str ="LALL";
+    cout << sl.checkRecord(str);
     //cout << sl.twoSum(nums,target);
     return 0;
 }
