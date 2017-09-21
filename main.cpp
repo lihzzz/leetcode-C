@@ -16,3 +16,12 @@ int main() {
     //cout << sl.twoSum(nums,target);
     return 0;
 }
+//int main(){
+//    string a ="abcd";
+//    string d ="ee";
+//    a.insert(a.begin(),'f');
+//    string::iterator it;
+//    for (it = a.begin(); it!=a.end(); ++it) {
+//        cout << *it;
+//    }
+//}
