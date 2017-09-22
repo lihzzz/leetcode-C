@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "easy/551_String.cpp"
+#include "easy/202_HashTable_Math.cpp"
 using namespace std;
 int main() {
     Solution sl;
@@ -11,8 +11,8 @@ int main() {
     vector<vector<int>> num_2={{2,3,4},{5,6,7},{8,9,10},{11,12,13},{14,15,16}};
     //nums.push_back(data);
     //vector<string> strs = {""};
-    string str ="LALL";
-    cout << sl.checkRecord(str);
+    int number = 11;
+    cout << sl.isHappy(number);
     //cout << sl.twoSum(nums,target);
     return 0;
 }
