@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "easy/20_String_Stack.cpp"
+#include "easy/234_LinkedList_TwoPoint.cpp"
 using namespace std;
 
 
@@ -14,9 +14,9 @@ int main() {
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     int number = 11;
-    string s = "([)]";
-    string t = "abc";
-    cout<<sl.isValid(s);
+    string s = "abba";
+    string t = "dog cat cat dog";
+    cout<<sl.isPalindrome(s,t);
     //cout << sl.twoSum(nums,target);
     return 0;
 }

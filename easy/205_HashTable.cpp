@@ -18,11 +18,6 @@ public:
         for (int i = 0; i <s.length() ; ++i) {
             if(m.count(s[i]))
                 s[i] = m[s[i]];
-
-            else if(s[i] == t[i]){
-                m[s[i]] = t[i];
-                n.insert(t[i]);
-            }
             else if(n.count(t[i]))
                 return false;
             else{

@@ -19,6 +19,11 @@ public:
             q.pop();
             tmp.push(a);
         }
+        while (!tmp.empty()){
+            int a = tmp.front();
+            tmp.pop();
+            q.push(a);
+        }
     }
 
     /** Removes the element on top of the stack and returns that element. */
