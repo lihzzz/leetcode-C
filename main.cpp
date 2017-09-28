@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "easy/438_HashTable.cpp"
+#include "easy/20_String_Stack.cpp"
 using namespace std;
 
 
@@ -14,9 +14,9 @@ int main() {
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     int number = 11;
-    string s = "cbaebabacd";
+    string s = "([)]";
     string t = "abc";
-    sl.findAnagrams(s,t);
+    cout<<sl.isValid(s);
     //cout << sl.twoSum(nums,target);
     return 0;
 }
