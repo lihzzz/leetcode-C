@@ -1,22 +1,20 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "easy/234_LinkedList_TwoPoint.cpp"
+#include "easy/475_BinarySearch.cpp"
 using namespace std;
 
 
 int main() {
     Solution sl;
-    int data1[] = {1,1,1};
-    int target = 4;
-    vector<int> nums(begin(data1),end(data1));
-    vector<vector<int>> num_2={{2,3,4},{5,6,7},{8,9,10},{11,12,13},{14,15,16}};
+    vector<int> nums = {1,2,3,5,15};
+    vector<int> nums2 = {2,30};
+    //vector<vector<int>> nums2={{2,3,4},{5,6,7},{8,9,10},{11,12,13},{14,15,16}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
-    int number = 11;
     string s = "abba";
     string t = "dog cat cat dog";
-    cout<<sl.isPalindrome(s,t);
+    cout<<sl.findRadius(nums,nums2);
     //cout << sl.twoSum(nums,target);
     return 0;
 }
