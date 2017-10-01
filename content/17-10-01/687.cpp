@@ -34,33 +34,32 @@ struct TreeNode {
 //    }
 //};
 
-
+using std::max;
 class Solution {
 public:
     int longestUnivaluePath(TreeNode* root) {
-        if(!root)
-            return 0;
-        int _max = -1,curval = root->val,curlen = -1,curmax=0;
-        helper(root,_max,curval,curlen);
-        return _max;
+        int res = 0;
+        if(root){
+            helper(root,res);
+        }
+        return res;
     }
-    void helper(TreeNode* t,int& _max,int curval,int curlen){
-        if(!t) return;
-        bool ileft= false,iright= false;
+    int helper(TreeNode* t,int& _max){
+        int l =0,r=0;
+        int resl = 0,resr = 0;
         if(t->left){
-            if(t->left->val == curval){
-                ileft = true;
-                curlen++;
-            }
+           l = helper(t->left,_max);
         }
         if(t->right){
-            if(t->right->val==curval){
-                curlen++;
-                iright = true;
-            }
+            r = helper(t->right,_max);
         }
-        helper(t->left,_max,t->left->val,curlen);
-        _max  = std::max(_max,curlen);
-
+        if(t->left && t->left->val == t->val){
+            resl = l+1;
+        }
+        if(t->right && t->right->val == t->val){
+            resr = r+1;
+        }
+        _max = max(_max,resl+resr);
+        return max(resl,resr);
     }
 };
