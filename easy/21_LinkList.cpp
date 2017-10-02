@@ -2,11 +2,7 @@
 // Created by lh on 2017/9/22.
 //
 #include <iostream>
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL){}
-};
+#include "../DataStruct.h"
 
 class Solution {
 public:
