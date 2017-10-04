@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "medium/540.cpp"
+#include "medium/647_String_DP.cpp"
 using namespace std;
 
 
@@ -12,7 +12,7 @@ int main() {
     vector<vector<char>> nums2={{'X','.','.','X'},{'.','.','.','X'},{'.','.','.','X'}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
-
-    cout << sl.singleNonDuplicate(nums);
+    string s = "aaaaa";
+    cout << sl.countSubstrings(s);
     return 0;
 }
