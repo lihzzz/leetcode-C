@@ -1,18 +1,24 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "medium/46_Backtracking.cpp"
+#include "DataStruct.h"
+#include "medium/508_HashTable_Tree.cpp"
 using namespace std;
 
 
 int main() {
     Solution sl;
-    vector<int> nums = {1,2,3};
+    TreeNode* t = new TreeNode(5);
+    TreeNode* t1 = new TreeNode(2);
+    TreeNode* t2 = new TreeNode(-3);
+    t->left = t1;
+    t->right = t2;
+    vector<int> nums = {1,3,5,7,9};
     //vector<int> nums2 = {2,30};
     vector<vector<char>> nums2={{'X','.','.','X'},{'.','.','.','X'},{'.','.','.','X'}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     string s = "aaaaa";
-    sl.permute(nums);
+    sl.findFrequentTreeSum(t);
     return 0;
 }
