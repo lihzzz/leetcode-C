@@ -25,7 +25,7 @@ using std::string;
 //        for (int k = nlen -1; k >=0 ; --k) {
 //            int tmp = 0;
 //            if(carry) tmp = (a[k]-'0')+(b[k]-'0') + 1;
-//            else tmp = (a[k] - '0') + (b[k] - '0');
+//           else tmp = (a[k] - '0') + (b[k] - '0');
 //
 //            if(tmp == 0){
 //                res.insert(res.begin(),'0');
