@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 using std::sort;
-using std::vector
+using std::vector;
 class Solution {
 public:
     int minMoves2(vector<int>& nums) {

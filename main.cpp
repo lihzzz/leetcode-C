@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "DataStruct.h"
-#include "medium/508_HashTable_Tree.cpp"
+#include "medium/547_Depth-FirstSearch_UnionFind.cpp"
 using namespace std;
 
 
@@ -15,10 +15,10 @@ int main() {
     t->right = t2;
     vector<int> nums = {1,3,5,7,9};
     //vector<int> nums2 = {2,30};
-    vector<vector<char>> nums2={{'X','.','.','X'},{'.','.','.','X'},{'.','.','.','X'}};
+    vector<vector<int>> nums2={{1,1,0},{1,1,0},{0,0,1}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     string s = "aaaaa";
-    sl.findFrequentTreeSum(t);
+    cout << sl.findCircleNum(nums2);
     return 0;
 }

@@ -5,7 +5,7 @@
 #include <functional>
 #include <numeric>
 using std::bit_xor;
-using std::accumulate
+using std::accumulate;
 using std::vector;
 class Solution {
 public:
