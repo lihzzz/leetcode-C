@@ -4,6 +4,8 @@
 #include <string>
 #include <queue>
 #include <unordered_map>
+#include <algorithm>
+using std::sort;
 using std::pair;
 using std::unordered_map;
 using std::priority_queue;
@@ -31,7 +33,11 @@ class Solution {
 public:
     string frequencySort(string s) {
         unordered_map<char,int>m;
-
+        for(auto a:s)++m[a];
+        std::sort(s.begin(),s.end(),[&](char& a,char& b){
+            return m[a] > m[b] || (m[a] == m[b] && a<b);
+        });
+        return s;
     }
 };
 
