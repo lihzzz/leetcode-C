@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "DataStruct.h"
-#include "medium/547_Depth-FirstSearch_UnionFind.cpp"
+#include "medium/477_BitManipulation.cpp"
 using namespace std;
 
 
@@ -13,12 +13,12 @@ int main() {
     TreeNode* t2 = new TreeNode(-3);
     t->left = t1;
     t->right = t2;
-    vector<int> nums = {1,3,5,7,9};
+    vector<int> nums = {4,14,2};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,1,0},{1,1,0},{0,0,1}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     string s = "aaaaa";
-    cout << sl.findCircleNum(nums2);
+    cout << sl.totalHammingDistance(nums);
     return 0;
 }

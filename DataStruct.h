@@ -6,6 +6,7 @@
 #define LEETCODE_DATASTRUCT_H
 
 #include <iostream>
+#include <mshtmlc.h>
 
 struct TreeNode {
     int val;
@@ -18,5 +19,15 @@ struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL){}
+};
+
+
+struct TrieNode{
+    TrieNode* child[26];
+    bool isWord;
+    TrieNode():isWord(false){
+        for(auto &a:child)
+            a = NULL;
+    }
 };
 #endif //LEETCODE_DATASTRUCT_H
