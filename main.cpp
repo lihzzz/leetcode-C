@@ -2,7 +2,8 @@
 #include <vector>
 #include <string>
 #include "DataStruct.h"
-#include "medium/477_BitManipulation.cpp"
+#include "content/17-10-08/694.cpp"
+//#include "medium/477_BitManipulation.cpp"
 using namespace std;
 
 
@@ -15,10 +16,10 @@ int main() {
     t->right = t2;
     vector<int> nums = {4,14,2};
     //vector<int> nums2 = {2,30};
-    vector<vector<int>> nums2={{1,1,0},{1,1,0},{0,0,1}};
+    vector<vector<int>> nums2={{1,1,0,0},{1,1,0,0},{0,0,1,1},{0,0,1,1}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     string s = "aaaaa";
-    cout << sl.totalHammingDistance(nums);
+    cout << sl.numDistinctIslands(nums2);
     return 0;
 }
