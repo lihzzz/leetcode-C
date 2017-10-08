@@ -59,7 +59,7 @@ public:
                 s.push({i, j - 1});
                 res.push_back(grid[i][j-1]);
                 weight++;
-                vis[i][j - 1] = 1;
+                vis[i][j - 1] = 1  ;
             }
         }
         return res;
