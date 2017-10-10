@@ -2,8 +2,9 @@
 #include <vector>
 #include <string>
 #include "DataStruct.h"
-#include "content/17-10-08/694.cpp"
-//#include "medium/477_BitManipulation.cpp"
+//#include "content/17-10-08/694.cpp"
+//#include "medium/592_Math.cpp"
+#include "medium/343_Math_DP.cpp"
 using namespace std;
 
 
@@ -19,7 +20,7 @@ int main() {
     vector<vector<int>> nums2={{1,1,0,0},{1,1,0,0},{0,0,1,1},{0,0,1,1}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
-    string s = "aaaaa";
-    cout << sl.numDistinctIslands(nums2);
+    string s = "1+2*3+(4*5+6)*7";
+    cout << sl.integerBreak(5);
     return 0;
 }
