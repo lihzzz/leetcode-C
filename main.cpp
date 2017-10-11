@@ -3,24 +3,32 @@
 #include <string>
 #include "DataStruct.h"
 //#include "content/17-10-08/694.cpp"
-//#include "medium/592_Math.cpp"
-#include "medium/343_Math_DP.cpp"
+#include "medium/445_LinkedList.cpp"
+//#include "hard/lili.cpp"
 using namespace std;
 
 
 int main() {
     Solution sl;
-    TreeNode* t = new TreeNode(5);
-    TreeNode* t1 = new TreeNode(2);
-    TreeNode* t2 = new TreeNode(-3);
-    t->left = t1;
-    t->right = t2;
+    ListNode* t1 = new ListNode(7);
+    ListNode* t2 = new ListNode(2);
+    ListNode* t3 = new ListNode(4);
+    ListNode* t4 = new ListNode(3);
+    t1->next = t2;
+    t2->next = t3;
+    t3->next = t4;
+
+    ListNode* a2 = new ListNode(5);
+    ListNode* a3 = new ListNode(6);
+    ListNode* a4 = new ListNode(4);
+    a2->next = a3;
+    a3->next = a4;
     vector<int> nums = {4,14,2};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,1,0,0},{1,1,0,0},{0,0,1,1},{0,0,1,1}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
-    string s = "1+2*3+(4*5+6)*7";
-    cout << sl.integerBreak(5);
+    string s = "1+((2+3)*4)-5";
+    sl.addTwoNumbers(t1,a2);
     return 0;
 }
