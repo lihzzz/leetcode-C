@@ -73,35 +73,25 @@ public:
             l2 = l2->next;
         }
         ListNode* res = new ListNode(0);
-        ListNode* head = res;
+        ListNode* tail = res;
         int carry = 0;
-        while (!s1.empty() && !s2.empty()){
-            int m = s1.top() + s2.top() + carry;
-            s1.pop();
-            s2.pop();
-            carry = m > 9 ? m/10:0;
-            m = m>9?m%(carry * 10):m;
-            head->next = new ListNode(m);
-            head = head->next;
+        while (!s1.empty() || !s2.empty()){
+            int sum = carry;
+            if(!s1.empty()){
+                sum += s1.top();
+                s1.pop();
+            }
+            if(!s2.empty()) {
+                sum += s2.top();
+                s2.pop();
+            }
+            carry = sum > 9 ? sum/10:0;
+            sum = sum>9?sum%(carry * 10):sum;
+            res->val = sum;
+            ListNode* head = new ListNode(carry);
+            head->next = res;
+            res = head;
         }
-        while (!s1.empty()){
-            int m = s1.top()+ carry;
-            s1.pop();
-            carry = m > 9 ? m/10:0;
-            m = m>9?m%(carry * 10):m;
-            head->next = new ListNode(m);
-            head = head->next;
-        }
-        while (!s2.empty()){
-            int m = s2.top() + carry;
-            s2.pop();
-            carry = m > 9 ? m/10:0;
-            m = m>9?m%(carry * 10):m;
-            head->next = new ListNode(m);
-            head = head->next;
-        }
-        if(carry)
-            head->next = new ListNode(carry);
-        return res->next;
+        return res->val == 0 ? res->next:res;
     }
 };
