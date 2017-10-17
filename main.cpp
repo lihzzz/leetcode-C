@@ -3,7 +3,7 @@
 #include <string>
 #include "DataStruct.h"
 //#include "content/17-10-15/696.cpp"
-#include "medium/392_BinarySearch_DP_Greedy.cpp"
+#include "medium/650_DP.cpp"
 //#include "hard/lili.cpp"
 using namespace std;
 
@@ -30,6 +30,6 @@ int main() {
     vector<string> strs = {"5","2","C","D","+"};
     string s = "leeeeetcode";
     string t = "ss";
-    cout << sl.isSubsequence(s,t);
+    cout << sl.minSteps(15);
     return 0;
 }
