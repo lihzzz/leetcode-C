@@ -3,7 +3,7 @@
 #include <string>
 #include "DataStruct.h"
 //#include "content/17-10-15/696.cpp"
-#include "medium/287_Array_TwoPointers_BinarySearch.cpp"
+#include "medium/494_DP_DepthFirst-Search.cpp"
 //#include "hard/lili.cpp"
 using namespace std;
 
@@ -23,13 +23,13 @@ int main() {
 //    ListNode* a4 = new ListNode(4);
     a2->next = a3;
 //    a3->next = a4;
-    vector<int> nums = {4,6,1,5,3,2,5};
+    vector<int> nums = {1,1,1,1,1};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,2,3},{4,5,6},{7,8,9}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     string s = "leeeeetcode";
     string t = "ss";
-    cout << sl.findDuplicate(nums);
+    cout << sl.findTargetSumWays(nums,3);
     return 0;
 }
