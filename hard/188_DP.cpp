@@ -16,9 +16,9 @@ public:
             int sell = 0;
             for (int i = 1; i < n; ++i) {
                 sell = max(sell,buy+prices[i]);
-                buy = max(buy,sell - prices[i]);
-            }
-            res = sell;
+            buy = max(buy,sell - prices[i]);
+        }
+        res = sell;
         }else{
             vector<int> buy(k,-prices[0]);
             vector<int> sell(k,0);
