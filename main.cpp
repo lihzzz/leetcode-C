@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include "DataStruct.h"
 #include "content/17-10-22/715.cpp"
-#include "medium/390.cpp"
+#include "medium/377_DP.cpp"
 //#include "hard/lili.cpp"
 using namespace std;
 
@@ -24,7 +24,7 @@ int main() {
 //    ListNode* a4 = new ListNode(4);
     a2->next = a3;
 //    a3->next = a4;
-    vector<int> nums = {1,3,7,5,10,3};
+    vector<int> nums = {1,2,3};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,2,3},{4,5,6},{7,8,9}};
     //nums.push_back(data);
@@ -32,7 +32,7 @@ int main() {
     string s = "leeeeetcode";
     string t = "ss";
     Solution sl;
-    cout << sl.lastRemaining(9);
+    cout << sl.combinationSum4(nums,4);
 //    RangeModule rm;
 //    rm.addRange(10,180);
 //    rm.addRange(150,200);

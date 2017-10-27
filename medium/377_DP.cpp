@@ -11,6 +11,7 @@ public:
             sum = nums[i];
             helper(nums,target,sum,count);
         }
+        return count;
     }
 
     void helper(vector<int> nums,int target,int sum,int& count){
@@ -21,7 +22,7 @@ public:
         else{
             for (int i = 0; i <nums.size() ; ++i) {
                 sum += nums[i];
-
+                helper(nums,target,sum,count);
             }
         }
     }
