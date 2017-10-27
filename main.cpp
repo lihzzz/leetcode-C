@@ -24,7 +24,7 @@ int main() {
 //    ListNode* a4 = new ListNode(4);
     a2->next = a3;
 //    a3->next = a4;
-    vector<int> nums = {1,2,3};
+    vector<int> nums = {4,2,1};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,2,3},{4,5,6},{7,8,9}};
     //nums.push_back(data);
@@ -32,7 +32,7 @@ int main() {
     string s = "leeeeetcode";
     string t = "ss";
     Solution sl;
-    cout << sl.combinationSum4(nums,4);
+    cout << sl.combinationSum4(nums,32);
 //    RangeModule rm;
 //    rm.addRange(10,180);
 //    rm.addRange(150,200);
