@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include "DataStruct.h"
 #include "content/17-10-22/715.cpp"
-//#include "medium/494_DP_DepthFirst-Search.cpp"
+#include "medium/390.cpp"
 //#include "hard/lili.cpp"
 using namespace std;
 
@@ -31,8 +31,8 @@ int main() {
     vector<string> strs = {"5","2","C","D","+"};
     string s = "leeeeetcode";
     string t = "ss";
-    cout << sizeof(int) << endl;
-
+    Solution sl;
+    cout << sl.lastRemaining(9);
 //    RangeModule rm;
 //    rm.addRange(10,180);
 //    rm.addRange(150,200);
