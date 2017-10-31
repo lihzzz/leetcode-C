@@ -4,6 +4,8 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include <climits>
+
 using std::accumulate;
 using std::max;
 using std::vector;

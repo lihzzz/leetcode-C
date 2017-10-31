@@ -3,6 +3,8 @@
 //
 #include <vector>
 #include <algorithm>
+#include <limits.h>
+
 using std::vector;
 using std::sort;
 class Solution {

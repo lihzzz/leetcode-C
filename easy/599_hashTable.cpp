@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <climits>
+
 using std::string;
 using std::unordered_map;
 using std::vector;

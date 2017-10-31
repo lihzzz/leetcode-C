@@ -3,7 +3,6 @@
 //
 #include <string>
 #include <vector>
-#include <mshtmlc.h>
 
 using std::vector;
 using std::string;
