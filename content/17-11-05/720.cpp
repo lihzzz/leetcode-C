@@ -9,22 +9,28 @@ using namespace std;
 class Solution {
 public:
     string longestWord(vector<string>& words) {
-        sort(words.begin(),words.end());
-        int wordsize = 0;
-        for (int i = words.size()-1; i >=0 ; --i) {
+        if(words.empty()){
+            return "";
+        }
+        sort(words.begin(),words.end(),[](string& a,string& b){
+            if(a.size()>b.size())
+                return true;
+            else if(a.size() == b.size())
+                return a<b;
+            return false;
+        });
+        for (int i = 0; i <words.size() ; ++i) {
             string curstr = words[i];
-
-        }
-    }
-    bool helper(vector<string> words,string w){
-        for (int i = 0; i <w.size()-1 ; ++i) {
-            string tmp = "";
-
-            while(w[i] == w[i+1]){
-                tmp += w[i];
-                if(find(words.begin(),words.end(),tmp) == words.end());
-
+            int j = 1;
+            for (; j <curstr.size() ; ++j) {
+                string str = curstr.substr(0,j);
+                if(find(words.begin(),words.end(),str) == words.end())
+                    break;
             }
+            if(j == curstr.size())
+                return curstr;
+
         }
+        return "";
     }
 };
