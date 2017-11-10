@@ -15,7 +15,7 @@ public:
                 i+=1;
             }
         }
-        if(i==n-1 && bits[i+1] == 0)
+        if(i==n-1 && bits[i] == 0)
             return true;
         return false;
     }
