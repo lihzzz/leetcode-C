@@ -3,8 +3,8 @@
 #include <string>
 #include <unordered_map>
 #include "DataStruct.h"
-//#include "content/17-11-05/721.cpp"
-#include "medium/77_Backtracking.cpp"
+#include "content/17-11-19/731.cpp"
+//#include "medium/77_Backtracking.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 using namespace std;
 
@@ -33,8 +33,18 @@ int main() {
     string t = "ss";
     vector<vector<string>> ss = {{"David","David0@m.co","David4@m.co","David3@m.co"},{"David","David5@m.co","David5@m.co","David0@m.co"},{"David","David1@m.co","David4@m.co","David0@m.co"},
                                  {"David","David0@m.co","David1@m.co","David3@m.co"},{"David","David4@m.co","David1@m.co","David3@m.co"}};
-    Solution sl;
-    sl.combine(2,1);
+
+    MyCalendarTwo MyCalendar;
+    cout << MyCalendar.book(24, 40); // returns true
+    cout << MyCalendar.book(43, 50); // returns true
+    cout << MyCalendar.book(27, 43); // returns true
+    cout << MyCalendar.book(5, 21); // returns false
+    cout<< MyCalendar.book(30, 40); // returns true
+    cout << MyCalendar.book(14, 29); // returns true
+    cout << MyCalendar.book(3, 19);
+    cout << MyCalendar.book(3, 14);
+    cout << MyCalendar.book(25, 39);
+    cout << MyCalendar.book(6, 19);
 //    RangeModule rm;
 //    rm.addRange(10,180);
 //    rm.addRange(150,200);
