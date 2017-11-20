@@ -1,10 +1,8 @@
 //
 // Created by lh on 2017/11/20.
 //
-
-#include <ntdef.h>
 #include "../DataStruct.h"
-
+using namespace std;
 class Solution {
 public:
     bool IsBalanced_Solution(TreeNode* pRoot) {
