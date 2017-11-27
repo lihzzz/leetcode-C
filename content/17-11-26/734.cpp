@@ -21,6 +21,7 @@ public:
             pair<string,string> cur2(words2[i],words1[i]);
             if(find(pairs.begin(),pairs.end(),cur)== pairs.end() && find(pairs.begin(),pairs.end(),cur2) == pairs.end()){
                 return false;
+
             }
         }
         return true;
