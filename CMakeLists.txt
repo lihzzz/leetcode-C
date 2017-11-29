@@ -52,7 +52,7 @@ set(SOURCE_FILES main.cpp code1/4.cpp code1/5.cpp code1/1.cpp code1/2.cpp code1/
         medium/436_BinarySearch.cpp content/17-11-19/728.cpp content/17-11-19/729.cpp content/17-11-19/731.cpp
         niuke/IsBalancedTree.cpp niuke/Expression_Solution.cpp niuke/Hanoi_Problem.cpp niuke/Hanoi_Chk.cpp niuke/nodeCount.cpp content/17-11-26/733.cpp
         content/17-11-26/734.cpp content/17-11-26/735.cpp niuke/stringMatching.cpp medium/611_Array.cpp medium/137_BitManipulation.cpp
-        easy/268_Array_Math_BitManipulation.cpp medium/142_LinkedList_TwoPoint.cpp hard/41_Array.cpp
+        easy/268_Array_Math_BitManipulation.cpp medium/142_LinkedList_TwoPoint.cpp hard/41_Array.cpp medium/399_Graph.cpp
 
         )
 add_executable(leetcode ${SOURCE_FILES})
