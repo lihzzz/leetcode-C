@@ -4,11 +4,7 @@
 
 #include <iostream>
 #include <unordered_map>
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
+#include "../DataStruct.h"
 
 //class Solution {
 //public:
