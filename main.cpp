@@ -3,8 +3,8 @@
 #include <string>
 #include <unordered_map>
 #include "DataStruct.h"
-//#include "content/17-11-26/733.cpp"
-#include "medium/611_Array.cpp"
+#include "content/17-12-03/740.cpp"
+//#include "medium/611_Array.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
 using namespace std;
@@ -24,14 +24,14 @@ int main() {
 //    ListNode* a4 = new ListNode(4);
     a2->next = a3;
 //    a3->next = a4;
-    vector<int> nums = {2,2,3,4};
+    vector<int> nums = {3,4,2};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{0,0,0},{0,0,0}};
     //nums.push_back(data);
     vector<string> strs = {"5","2","C","D","+"};
     string t = "ss";
     Solution sl;
-    cout<<sl.triangleNumber(nums);
+    sl.deleteAndEarn(nums);
 //    MyCalendarTwo MyCalendar;
 //    cout << MyCalendar.book(24, 40); // returns true
 //    cout << MyCalendar.book(43, 50); // returns true
