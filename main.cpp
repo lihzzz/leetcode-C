@@ -3,8 +3,8 @@
 #include <string>
 #include <unordered_map>
 #include "DataStruct.h"
-//#include "content/17-12-17/750.cpp"
-#include "medium/334.cpp"
+#include "content/17-12-24/751.cpp"
+//#include "medium/334.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
 using namespace std;
@@ -31,7 +31,7 @@ int main() {
     vector<string> strs = {"measure","other","every","base","according","level","meeting","none","marriage","rest"};
     string t = "10";
     Solution sl;
-    sl.increasingTriplet(nums);
+    sl.ipToCIDR("255.0.0.7",30);
 //    MyCalendarTwo MyCalendar;
 //    cout << MyCalendar.book(24, 40); // returns true
 //    cout << MyCalendar.book(43, 50); // returns true
