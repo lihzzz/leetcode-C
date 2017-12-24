@@ -3,73 +3,78 @@
 //
 #include <vector>
 #include <string>
-#include <cmath>
+#include <sstream>
+#include <boost/lexical_cast.hpp>
+//#include <boost/lexical_cast.hpp>
 #include <bitset>
-
 using namespace std;
+using namespace boost;
 class Solution {
 public:
     vector<string> ipToCIDR(string ip, int range) {
         vector<string> res;
-        int curaip = stoi(ip.substr(0,ip.find_first_of('.')));
-        ip = ip.substr(ip.find_first_of('.')+1);
-        int curbip = stoi(ip.substr(0,ip.find_first_of('.')));
-        ip = ip.substr(ip.find_first_of('.')+1);
-        int curcip = stoi(ip.substr(0,ip.find_first_of('.')));
-        ip = ip.substr(ip.find_first_of('.')+1);
-        int curdip = stoi(ip);
-        int currange = 0;
-        string pushstring ="";
-//        string pushstring = to_string(curaip) + "."+to_string(curbip) + "."
-//                            + to_string(curcip) + "." + to_string(curdip)+"/" + to_string(32);
-//        res.push_back(pushstring);
-//
-//        range -= currange;
-//        curdip += currange;
-//        if(curdip>255){
-//            curcip += curdip/255;
-//            curdip = curdip%255;
-//        }
-//        if(curcip>255){
-//            curbip += curcip/255;
-//            curcip = curcip%255;
-//        }
-//        if(curbip>255){
-//            curaip += curbip/255;
-//            curbip = curbip%255;
-//        }
-        while (range!=0 ){
-            int i =0,j=0;
-            for (;; ++j) {
-                if(curdip<pow(2,j)){
+        auto numvec = split(ip,'.');
+        int value =stoi(numvec[3]);
+        for (int j = 1; j <4 ; ++j) {
+            int a = stoi(numvec[3-j])<<(8*j);
+            value += a;
+        }
+        int count = 0;
+        bitset<32> b(value);
+        while(count < range){
+            int i = 0;
+            while (b[i] != 1){
+                i++;
+            }
+            int c = 32-i;
+            int nc = pow(2,i);
+            if(count + nc > range){
+                int need = range - count;
+                for(;;i--){
+                    if(need>=pow(2,i))
+                        break;
+                }
+                c = 32 - i;
+                nc = pow(2,i);
+                count += nc;
+            }else{
+                count += nc;
+            }
+            res.push_back(to_ipstring(b,c));
+            for (; i <32 ; ++i) {
+                if(b[i] == 0){
+
                     break;
                 }
             }
-            for (;; ++i) {
-                if(range<pow(2,i)){
-                    break;
-                }
-            }
-            int a = i>j?j-1:i-1;
-            currange = pow(2,a);
-            range -=currange;
-            pushstring = to_string(curaip) + "."+to_string(curbip) + "."
-                                + to_string(curcip) + "." + to_string(curdip)+"/" + to_string(32-a);
-            res.push_back(pushstring);
-            curdip += currange;
-            if(curdip>255){
-                curcip += curdip/255;
-                curdip = curdip%255;
-            }
-            if(curcip>255){
-                curbip += curcip/255;
-                curcip = curcip%255;
-            }
-            if(curbip>255){
-                curaip += curbip/255;
-                curbip = curbip%255;
+            b[i] = 1;
+            for (int k = i-1; k >=0 ; --k) {
+                b[k] = 0;
             }
         }
         return res;
+    }
+    string to_ipstring(bitset<32>& b,int c){
+        string rets = "";
+        for (int i = 0;  i < 32 ; i+=8) {
+            int v = b[i];
+            for (int j = 1; j <8 ; ++j) {
+                int n = b[i+j];
+                v+=pow(2,j)*n;
+            }
+            if(i<24) rets = "." + to_string(v) + rets;
+            else rets = to_string(v) + rets;
+        }
+        rets += "/" + to_string(c);
+        return rets;
+    }
+    vector<string> split(string ip,char delima){
+        stringstream s(ip);
+        string str;
+        vector<string > result;
+        while(getline(s,str,delima)){
+            result.push_back(str);
+        }
+        return result;
     }
 };
