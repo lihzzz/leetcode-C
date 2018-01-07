@@ -3,7 +3,7 @@
 #include <string>
 #include <unordered_map>
 #include "DataStruct.h"
-#include "content/17-12-31/754.cpp"
+#include "content/18-01-07/759.cpp"
 //#include "medium/334.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
@@ -31,7 +31,8 @@ int main() {
     vector<string> strs = {"measure","other","every","base","according","level","meeting","none","marriage","rest"};
     string t = "10";
     Solution sl;
-    sl.reachNumber(3);
+    vector<vector<Interval>> time = {{Interval(1,2),Interval(5,6)},{Interval{1,3}},{Interval{4,10}}};
+    sl.employeeFreeTime(time);
 //    MyCalendarTwo MyCalendar;
 //    cout << MyCalendar.book(24, 40); // returns true
 //    cout << MyCalendar.book(43, 50); // returns true
