@@ -3,7 +3,7 @@
 #include <string>
 #include <unordered_map>
 #include "DataStruct.h"
-#include "content/18-01-07/759.cpp"
+#include "content/18-01-14/765.cpp"
 //#include "medium/334.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
@@ -24,15 +24,18 @@ int main() {
 //    ListNode* a4 = new ListNode(4);
     a2->next = a3;
 //    a3->next = a4;
-    vector<int> nums = {1,2,3,4};
+    vector<int> nums = {0,2,4,6,7,1,3,5};
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,1,1},{1,1,1},{1,1,1}};
     //nums.push_back(data);
     vector<string> strs = {"measure","other","every","base","according","level","meeting","none","marriage","rest"};
-    string t = "10";
+    string t ="caedbdedda";
     Solution sl;
     vector<vector<Interval>> time = {{Interval(1,2),Interval(5,6)},{Interval{1,3}},{Interval{4,10}}};
-    sl.employeeFreeTime(time);
+    sl.minSwapsCouples(nums);
+
+
+
 //    MyCalendarTwo MyCalendar;
 //    cout << MyCalendar.book(24, 40); // returns true
 //    cout << MyCalendar.book(43, 50); // returns true
