@@ -3,7 +3,11 @@
 #include <string>
 #include <unordered_map>
 #include "DataStruct.h"
-#include "content/18-01-14/765.cpp"
+#include "tool.h"
+//#include "content/18-01-14/765.cpp"
+//#include "LiLi.cpp"
+#include "lintcode/sort.cpp"
+// #include "niuke/InversePairs.cpp"
 //#include "medium/334.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
@@ -24,15 +28,31 @@ int main() {
 //    ListNode* a4 = new ListNode(4);
     a2->next = a3;
 //    a3->next = a4;
-    vector<int> nums = {0,2,4,6,7,1,3,5};
+    vector<int> nums = {3,2,1,4,5};
     //vector<int> nums2 = {2,30};
-    vector<vector<int>> nums2={{1,1,1},{1,1,1},{1,1,1}};
+    vector<vector<int>> nums2={{1,2,8,9},{2,4,9,12},{4,7,10,13},{6,8,11,15}};
     //nums.push_back(data);
     vector<string> strs = {"measure","other","every","base","according","level","meeting","none","marriage","rest"};
-    string t ="caedbdedda";
+    string t ="abcXYZdef";
+
     Solution sl;
     vector<vector<Interval>> time = {{Interval(1,2),Interval(5,6)},{Interval{1,3}},{Interval{4,10}}};
-    sl.minSwapsCouples(nums);
+//    TreeNode* root = new TreeNode(10);
+//    TreeNode* a = new TreeNode(5);
+//    TreeNode* b = new TreeNode(12);
+//    TreeNode* c = new TreeNode(4);
+//    TreeNode* d = new TreeNode(7);
+//    root->left = a;
+//    root->right = b;
+//    a->left = c;
+//    a->right = d;
+    sl.sortIntegers(nums);
+//    int times = 200000;
+//    for (int i = 10000; i < 200000; ++i) {
+//        vector<int> data = generateRandomArray(i,10000000);
+//        sl.InversePairs(nums);
+//    }
+
 
 
 

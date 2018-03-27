@@ -1,31 +1,45 @@
 //
 // Created by lh on 2017/12/30.
 //
-
-#include <iostream>
-#include "./DataStruct.h"
+#include <vector>
+#include <climits>
+#include <string>
+#include <algorithm>
+#include "DataStruct.h"
+#include <stack>
+#include <queue>
+using namespace std;
 
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if(!l1 || !l2) return l1?l1:l2;
-        ListNode *res = new ListNode(0);
-        ListNode *cur = res;
-        while (l1->next && l2->next ){
-            if(l1->val < l2->val){
-                cur ->next = new ListNode(l1->val);
-                cur = cur->next;
-                l1 = l1->next;
-            } else{
-                cur ->next = new ListNode(l2->val);
-                cur = cur->next;
-                l2 = l2->next;
+    /**
+     * @param root: A Tree
+     * @return: Preorder in ArrayList which contains node values.
+     */
+    vector<int> postorderTraversal(TreeNode * root) {
+        // write your code here
+        vector<int>res;
+        if(!root)
+            return res;
+
+        s.push(root);
+        TreeNode* head = root;
+        while (!s.empty()){
+            TreeNode* t =s.top();
+            if(!t->left && !t->right || t->left == head||t->right == head){
+                res.push_back(t->val);
+                s.pop();
+                head = t;
+            }
+            else{
+                if(t->right)s.push(t->right);
+                if(t->left) s.push(t->left);
             }
         }
-        if(l1->next)
-            cur ->next = l1;
-        else
-            cur->next = l2;
-        return res->next;
+        return res;
     }
+
+private:
+    stack<TreeNode*>s;
 };
+
