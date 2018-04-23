@@ -23,7 +23,7 @@ vector<int> generateRandomArray(int size,int value){
     return res;
 }
 void heapInsert(vector<int>& arr,int index){
-    while (arr[index]>arr[(index-1)/2]){
+    while (arr[index]<arr[(index-1)/2]){
         swap(arr,index,(index-1)/2);
         index = (index-1)/2;
     }

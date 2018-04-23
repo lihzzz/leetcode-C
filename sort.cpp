@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-
+#include "tool.h"
 using namespace std;
 void bubbleSort1(vector<int>& a){
     bool flag = false;
@@ -70,6 +70,7 @@ void Shellsort(vector<int>& a){
         }
     }while (inc > 1);
 }
+
 void adjustHeap(vector<int>& a,int start,int end){
     int tmp = a[start];
     for (int i = start*2+1; i<=end ; i=i*2+1) {
@@ -178,11 +179,46 @@ void mergesort(vector<int>& a,int left,int right,vector<int>b){
 //        quicksort(a,index+1,end);
 //    }
 //}
+//void swap(vector<int>& arr, int i, int j) {
+//    int tmp = arr[i];
+//    arr[i] = arr[j];
+//    arr[j] = tmp;
+//}
+//void heapInsert(vector<int>& arr, int index) {
+//    while (arr[index] > arr[(index - 1) / 2]) {
+//        swap(arr, index, (index - 1) / 2);
+//        index = (index - 1) / 2;
+//    }
+//}
+//
+//void heapify(vector<int> arr, int index, int size) {
+//    int left = index * 2 + 1;
+//    while (left < size) {
+//        int largest = left + 1 < size && arr[left + 1] > arr[left] ? left + 1 : left;
+//        largest = arr[largest] > arr[index] ? largest : index;
+//        if (largest == index) {
+//            break;
+//        }
+//        swap(arr, largest, index);
+//        index = largest;
+//        left = index * 2 + 1;
+//    }
+//}
 //int main(){
-//    vector<int> a= {8,7,6,5,4,3,2,1,5,3,2};
-//    vector<int> b(a.size(),0);
-//    quicksort(a,0,a.size()-1);
-//    for (int i = 0; i <a.size() ; ++i) {
-//        std::cout << a[i]<< " ";
+//    vector<int> arr= {7,2,9,6,8,5,3,4};
+//    vector<int> b(arr.size(),0);
+//
+//    for (int i = 0; i < arr.size(); i++) {
+//        heapInsert(arr, i);
+//    }
+//    int size = arr.size();
+//    swap(arr, 0, --size);
+//    while (size > 0) {
+//        heapify(arr, 0, size);
+//        swap(arr, 0, --size);
+//    }
+//
+//    for (int i = 0; i <arr.size() ; ++i) {
+//        std::cout << arr[i]<< " ";
 //    }
 //}
