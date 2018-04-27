@@ -17,12 +17,12 @@ long long help(long long  x, long long y, long long N)
     return ret * ret * x % N;
 }
 
-int main()
-{
-    long long x, y, N;
-    while(cin >> x >> y >> N){
-        cout << help(x, y, N) << endl;
-    }
-    return 0;
-}
+//int main()
+//{
+//    long long x, y, N;
+//    while(cin >> x >> y >> N){
+//        cout << help(x, y, N) << endl;
+//    }
+//    return 0;
+//}
 
