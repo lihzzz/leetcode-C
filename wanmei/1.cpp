@@ -15,19 +15,19 @@ using namespace std;
 int jump(int num);
 
 //以下main已完成、可直接使用
-int main()
-{
-    string line;
-    while(getline(cin, line))
-    {
-        stringstream ss(line);
-        int num = 0;
-        ss >> num;
-        if(num == 0) break;
-        cout << jump(num) << endl;
-    }
-    return 0;
-}
+//int main()
+//{
+//    string line;
+//    while(getline(cin, line))
+//    {
+//        stringstream ss(line);
+//        int num = 0;
+//        ss >> num;
+//        if(num == 0) break;
+//        cout << jump(num) << endl;
+//    }
+//    return 0;
+//}
 
 int jump(int num){
     if(num<4)

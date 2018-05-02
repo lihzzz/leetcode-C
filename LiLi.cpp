@@ -1,45 +1,105 @@
 //
 // Created by lh on 2017/12/30.
 //
+
+#include <iostream>
 #include <vector>
-#include <climits>
+#include <list>
 #include <string>
-#include <algorithm>
-#include "DataStruct.h"
-#include <stack>
-#include <queue>
+#include <typeinfo>
 using namespace std;
 
-class Solution {
+class A
+{
 public:
-    /**
-     * @param root: A Tree
-     * @return: Preorder in ArrayList which contains node values.
-     */
-    vector<int> postorderTraversal(TreeNode * root) {
-        // write your code here
-        vector<int>res;
-        if(!root)
-            return res;
-
-        s.push(root);
-        TreeNode* head = root;
-        while (!s.empty()){
-            TreeNode* t =s.top();
-            if(!t->left && !t->right || t->left == head||t->right == head){
-                res.push_back(t->val);
-                s.pop();
-                head = t;
-            }
-            else{
-                if(t->right)s.push(t->right);
-                if(t->left) s.push(t->left);
-            }
-        }
-        return res;
+    A()
+    {
+        cout<<"A()"<<endl;
     }
-
-private:
-    stack<TreeNode*>s;
+    virtual ~A()
+    {
+        cout<<"~A()"<<endl;
+    }
 };
 
+class B:public A
+{
+public:
+    B()
+    {
+        cout<<"B()"<<endl;
+    }
+    virtual ~B()
+    {
+        cout<<"~B()"<<endl;
+    }
+};
+class C:public B
+{
+public:
+    C()
+    {
+        cout<<"C()"<<endl;
+    }
+    virtual ~C()
+    {
+        cout<<"~C()"<<endl;
+    }
+};
+class D:public B,public A
+{
+public:
+    D()
+    {
+        cout<<"D()"<<endl;
+    }
+    virtual ~D()
+    {
+        cout<<"~D()"<<endl;
+    }
+};
+int main(int argc,char** argv)
+{
+//    A *pa = new C;
+//    if (B *pb = dynamic_cast<B*>(pa))
+//    {
+//        cout<<"True"<<endl;
+//    }
+//    else
+//    {
+//        cout<<"False"<<endl;
+//    }//因为指针类型的转换失败返回为0可以使用条件中赋值判断
+//
+//    try
+//    {
+//        C &cp = dynamic_cast<C&>(*pa);//正确，*pa的类型是C
+//        cout << "cp" << endl;
+//    }
+//    catch (std::bad_cast e)
+//    {
+//        cout << e.what() << endl;
+//    }//引用类型失败返回的是bad_cast
+
+    B *pbb = new B;
+    if (C *pc = dynamic_cast<C*>(pbb))
+    {
+        cout<<"True"<<endl;
+    }
+    else
+    {
+        cout<<"False"<<endl;
+    }
+
+//    A *paa = new D;
+//    if (B *pc = dynamic_cast<B*>(paa))
+//    {
+//        cout<<"True"<<endl;
+//    }
+//    else
+//    {
+//        cout<<"False"<<endl;
+//    }
+
+    cin.get();
+    return 0;
+}
