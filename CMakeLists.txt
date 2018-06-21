@@ -1,120 +1,18 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.10)
 project(leetcode)
-set(Boost_INCLUDE_DIR G:/MinGW/include)
-set(Boost_LIBRARY_DIR G:/MinGW/lib)
-find_package(Boost COMPONENTS system filesystem REQUIRED)
-include_directories(${Boost_INCLUDE_DIR})
+
+
+
+
+#set(Boost_INCLUDE_DIR G:/MinGW/include)
+#set(Boost_LIBRARY_DIR G:/MinGW/lib)
+#find_package(Boost COMPONENTS system filesystem REQUIRED)
+#include_directories(${Boost_INCLUDE_DIR})
 
 
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp code1/4.cpp code1/5.cpp code1/1.cpp code1/2.cpp code1/3.cpp code1/6.cpp
-        code1/7.cpp code1/8.cpp code1/9.cpp code1/10.cpp code1/44.cpp code1/11.cpp code1/12.cpp
-        code1/13.cpp code1/131.cpp code1/132.cpp code1/139.cpp code1/140.cpp code1/322.cpp code1/300.cpp code1/70.cpp
-        code1/62.cpp code1/63.cpp code1/53.cpp code1/55.cpp code1/45.cpp code1/152.cpp code1/411.cpp code1/35.cpp
-        code1/153.cpp code1/154.cpp code1/34.cpp code2/69.cpp code2/74.cpp code2/33.cpp code2/81.cpp code2/93.cpp
-        code2/89.cpp code2/115.cpp code2/14.cpp code2/58.cpp code2/15.cpp code2/16.cpp code2/18.cpp code2/454.cpp
-        easy/657.cpp easy/617.cpp easy/680.cpp medium/677.cpp medium/678.cpp easy/561.cpp easy/557_String.cpp
-        easy/669.cpp easy/671.cpp easy/575.cpp easy/566.cpp easy/637.cpp easy/521.cpp easy/653.cpp easy/167.cpp
-        easy/606.cpp easy/538_tree.cpp easy/598_math.cpp easy/453_math.cpp
-        easy/349_hashtable_twopoint_binarysearch_sort.cpp easy/171_math.cpp
-        easy/136_HashTable_BitManipulation.cpp easy/383_string.cpp easy/455_greedy.cpp easy/404_tree.cpp
-        easy/563_tree.cpp easy/169_DivideConquer.cpp easy/387.cpp easy/237_LinkList.cpp easy/599_hashTable.cpp
-        easy/661_array.cpp easy/100_tree_DepthfirstSearch.cpp easy/242_hashTable_sort.cpp easy/506.cpp
-        easy/217_HashTable_Array.cpp easy/206_LinkedList.cpp easy/409_HashTable.cpp easy/628_Array_Math.cpp
-        easy/447_Hashtable.cpp easy/401_BackTracking_BitManipulation.cpp
-        easy/350_Hashtable_TwoPointers_BinarySearch_sort.cpp easy/504_Base.cpp easy/674_Array.cpp easy/543_Tree.cpp
-        easy/551_String.cpp easy/541_String.cpp easy/108_Tree_Depth-firstSearch.cpp easy/415_String.cpp
-        easy/405_BitManipulation.cpp easy/202_HashTable_Math.cpp easy/594_HashTable.cpp easy/572_Tree.cpp
-        easy/107_Tree_Breadth-firstSearch.cpp easy/645_HashTable_Math.cpp easy/231_Math_BitManipulation.cpp
-        easy/83_LinkList.cpp easy/437_Tree.cpp easy/191_BitManipulation.cpp easy/27_Array_TwoPoint.cpp
-        easy/263_Math.cpp easy/21_LinkList.cpp easy/235_Tree.cpp easy/198_DP.cpp
-        easy/101_Tree_Depth-FirstSearch_BreadTh-FirstSearch.cpp easy/257_Tree_Depth-FirstSearch.cpp
-        easy/118_Array.cpp content/17-9-24/682.cpp content/17-9-24/681.cpp content/17-9-24/683.cpp
-        content/17-9-24/684.cpp easy/66_Array_Math.cpp easy/342_BitManipulation.cpp easy/345_TwoPointers_String.cpp
-        easy/367_Math_BinarySearch.cpp easy/459_String.cpp easy/643_Array.cpp easy/501_Tree.cpp
-        easy/110_Tree_Depth-FirstSearch.cpp easy/119_Array.cpp easy/232_Stack_Design.cpp easy/434_String.cpp
-        easy/172_Math.cpp easy/374_BinarySearch.cpp easy/26_Array_TwoPoint.cpp easy/141_LinkedList_TwoPoint.cpp
-        easy/38_String.cpp easy/112_Tree_Depth-FirstSearch.cpp easy/205_HashTable.cpp easy/438_HashTable.cpp
-        easy/507_Math.cpp easy/20_String_Stack.cpp easy/111_Tree_Depth-FirstSearch_Breadth-FirstSearch.cpp
-        easy/225_Stack_Design.cpp easy/290_HashTable.cpp easy/234_LinkedList_TwoPoint.cpp easy/67_Math_String.cpp
-        easy/203_LinkListed.cpp easy/219_Array_HashTable.cpp easy/88_Array_TwoPoint.cpp easy/633_Math.cpp
-        easy/160_LinkedList.cpp easy/303_DP.cpp easy/400_Math.cpp easy/605_Array.cpp easy/475_BinarySearch.cpp
-        easy/587_Array.cpp easy/190_BitManipulation.cpp easy/155_Stack_Design.cpp easy/28_TwoPoint_String.cpp
-        easy/532_Array_TwoPoint.cpp easy/414_Array.cpp easy/204_HashTable_Math.cpp content/17-10-01/686.cpp
-        content/17-10-01/687.cpp easy/125_TwoPoint_String.cpp easy/168_Math.cpp easy/189_Array.cpp easy/665_Array.cpp
-        DataStruct.h medium/654_Tree.cpp medium/537_Math_String.cpp medium/419.cpp
-        medium/513_Tree_Depth-FirstSearch_BreadTh-FirstSearch.cpp medium/442_Array.cpp medium/406_Greedy.cpp
-        medium/540.cpp medium/647_String_DP.cpp medium/553_Math_String.cpp
-        medium/515_Tree_Depth-FirstSearch_Breadth-FirstSearch.cpp medium/526_Backtracking.cpp
-        medium/46_Backtracking.cpp medium/413_Math_DP.cpp medium/508_HashTable_Tree.cpp medium/609_HashTable_String.cpp
-        medium/260_BitManipulation.cpp medium/667_Array.cpp medium/462_Math.cpp medium/495_Array.cpp
-        medium/451_HashTable_Heap.cpp medium/655_Tree.cpp medium/238_Array.cpp medium/547_Depth-FirstSearch_UnionFind.cpp
-        medium/347_HashTable_Heap.cpp medium/319_Math_Brainteaser.cpp medium/672_Math.cpp medium/648_HashTable_Trie.cpp
-        medium/208_Design_Trie.cpp medium/646_DP.cpp medium/94_HashTable_Stack_Tree.cpp medium/477_BitManipulation.cpp
-        medium/503_Stack.cpp medium/382_ReservoirSampling.cpp medium/384.cpp medium/623_Tree.cpp content/17-10-08/693.cpp
-        content/17-10-08/695.cpp content/17-10-08/694.cpp medium/421_BitManipulation_Trie.cpp medium/592_Math.cpp
-        medium/343_Math_DP.cpp hard/lili.cpp medium/357_Math_DP_Backtracking.cpp medium/445_LinkedList.cpp medium/498.cpp
-        medium/22_String_Backtracking.cpp medium/539_String.cpp medium/216_Array_Backtracking.cpp
-        medium/554_Hashtable.cpp medium/144_Stack_Tree.cpp medium/486_DP_MiniMax.cpp medium/378_BinarySearch_Heap.cpp
-        medium/241_DivideandConquer.cpp medium/96_DP_Tree.cpp content/17-10-15/697.cpp content/17-10-15/696.cpp
-        content/17-10-15/698.cpp content/17-10-15/699.cpp medium/416_DP.cpp medium/318_BitManipulation.cpp
-        medium/392_BinarySearch_DP_Greedy.cpp medium/423_Math.cpp medium/230_BinarySearch_Tree.cpp medium/452_Greedy.cpp
-        medium/583_String.cpp medium/650_DP.cpp medium/328_LinkedList.cpp medium/337_Tree_Depth-firstSearch.cpp
-        medium/287_Array_TwoPointers_BinarySearch.cpp medium/398_ReservoirSampling.cpp
-        medium/494_DP_DepthFirst-Search.cpp content/17-10-22/714.cpp content/17-10-22/712.cpp content/17-10-22/713.cpp
-        content/17-10-22/715.cpp hard/188_DP.cpp medium/309_DP.cpp medium/712_DP.cpp medium/524_TwoPoint_Sort.cpp
-        medium/516_DP.cpp medium/424.cpp medium/449_Tree.cpp medium/390.cpp)
-set(SOURCE_FILES main.cpp code1/4.cpp code1/5.cpp code1/1.cpp code1/2.cpp code1/3.cpp code1/6.cpp code1/7.cpp code1/8.cpp
-        code1/9.cpp code1/10.cpp code1/44.cpp code1/11.cpp code1/12.cpp code1/13.cpp code1/131.cpp code1/132.cpp code1/139.cpp
-        code1/140.cpp code1/322.cpp code1/300.cpp code1/70.cpp code1/62.cpp code1/63.cpp code1/53.cpp code1/55.cpp code1/45.cpp
-        code1/152.cpp code1/411.cpp code1/35.cpp code1/153.cpp code1/154.cpp code1/34.cpp code2/69.cpp code2/74.cpp code2/33.cpp
-        code2/81.cpp code2/93.cpp code2/89.cpp code2/115.cpp code2/14.cpp code2/58.cpp code2/15.cpp code2/16.cpp code2/18.cpp code2/454.cpp
-        easy/657.cpp easy/617.cpp easy/680.cpp medium/677.cpp medium/678.cpp easy/561.cpp easy/557_String.cpp easy/669.cpp easy/671.cpp
-        easy/575.cpp easy/566.cpp easy/637.cpp easy/521.cpp easy/653.cpp easy/167.cpp easy/606.cpp easy/538_tree.cpp easy/598_math.cpp
-        easy/453_math.cpp easy/349_hashtable_twopoint_binarysearch_sort.cpp easy/171_math.cpp easy/383_string.cpp easy/455_greedy.cpp
-        easy/404_tree.cpp easy/563_tree.cpp easy/169_DivideConquer.cpp easy/387.cpp easy/237_LinkList.cpp easy/599_hashTable.cpp
-        easy/661_array.cpp easy/100_tree_DepthfirstSearch.cpp easy/242_hashTable_sort.cpp easy/506.cpp easy/217_HashTable_Array.cpp
-        easy/206_LinkedList.cpp easy/409_HashTable.cpp easy/628_Array_Math.cpp easy/447_Hashtable.cpp easy/401_BackTracking_BitManipulation.cpp
-        easy/350_Hashtable_TwoPointers_BinarySearch_sort.cpp easy/504_Base.cpp easy/674_Array.cpp easy/543_Tree.cpp easy/551_String.cpp
-        easy/541_String.cpp easy/108_Tree_Depth-firstSearch.cpp easy/415_String.cpp easy/405_BitManipulation.cpp easy/202_HashTable_Math.cpp
-        easy/594_HashTable.cpp easy/572_Tree.cpp easy/107_Tree_Breadth-firstSearch.cpp easy/645_HashTable_Math.cpp easy/231_Math_BitManipulation.cpp
-        easy/83_LinkList.cpp easy/437_Tree.cpp easy/191_BitManipulation.cpp easy/27_Array_TwoPoint.cpp easy/263_Math.cpp easy/21_LinkList.cpp
-        easy/235_Tree.cpp easy/198_DP.cpp easy/101_Tree_Depth-FirstSearch_BreadTh-FirstSearch.cpp easy/257_Tree_Depth-FirstSearch.cpp
-        easy/118_Array.cpp content/17-9-24/682.cpp content/17-9-24/681.cpp content/17-9-24/683.cpp content/17-9-24/684.cpp easy/66_Array_Math.cpp
-        easy/342_BitManipulation.cpp easy/345_TwoPointers_String.cpp easy/367_Math_BinarySearch.cpp easy/459_String.cpp easy/643_Array.cpp
-        easy/501_Tree.cpp easy/110_Tree_Depth-FirstSearch.cpp easy/119_Array.cpp easy/232_Stack_Design.cpp easy/434_String.cpp easy/172_Math.cpp
-        easy/374_BinarySearch.cpp easy/26_Array_TwoPoint.cpp easy/141_LinkedList_TwoPoint.cpp easy/38_String.cpp easy/112_Tree_Depth-FirstSearch.cpp
-        easy/205_HashTable.cpp easy/438_HashTable.cpp easy/507_Math.cpp easy/20_String_Stack.cpp easy/111_Tree_Depth-FirstSearch_Breadth-FirstSearch.cpp
-        easy/225_Stack_Design.cpp easy/290_HashTable.cpp easy/234_LinkedList_TwoPoint.cpp easy/67_Math_String.cpp easy/203_LinkListed.cpp
-        easy/219_Array_HashTable.cpp easy/88_Array_TwoPoint.cpp easy/633_Math.cpp easy/160_LinkedList.cpp easy/303_DP.cpp easy/400_Math.cpp
-        easy/605_Array.cpp easy/475_BinarySearch.cpp easy/587_Array.cpp easy/190_BitManipulation.cpp easy/155_Stack_Design.cpp
-        easy/28_TwoPoint_String.cpp easy/532_Array_TwoPoint.cpp easy/414_Array.cpp easy/204_HashTable_Math.cpp content/17-10-01/686.cpp
-        content/17-10-01/687.cpp easy/125_TwoPoint_String.cpp easy/168_Math.cpp easy/189_Array.cpp easy/665_Array.cpp DataStruct.h medium/654_Tree.cpp
-        medium/537_Math_String.cpp medium/419.cpp medium/513_Tree_Depth-FirstSearch_BreadTh-FirstSearch.cpp medium/442_Array.cpp
-        medium/406_Greedy.cpp medium/540.cpp medium/647_String_DP.cpp medium/553_Math_String.cpp medium/515_Tree_Depth-FirstSearch_Breadth-FirstSearch.cpp
-        medium/526_Backtracking.cpp medium/46_Backtracking.cpp medium/413_Math_DP.cpp medium/508_HashTable_Tree.cpp medium/609_HashTable_String.cpp
-        medium/260_BitManipulation.cpp medium/667_Array.cpp medium/462_Math.cpp medium/495_Array.cpp medium/451_HashTable_Heap.cpp medium/655_Tree.cpp
-        medium/238_Array.cpp medium/547_Depth-FirstSearch_UnionFind.cpp medium/347_HashTable_Heap.cpp medium/319_Math_Brainteaser.cpp medium/672_Math.cpp
-        medium/648_HashTable_Trie.cpp medium/208_Design_Trie.cpp medium/646_DP.cpp medium/94_HashTable_Stack_Tree.cpp medium/477_BitManipulation.cpp
-        medium/503_Stack.cpp medium/382_ReservoirSampling.cpp medium/384.cpp medium/623_Tree.cpp content/17-10-08/693.cpp content/17-10-08/695.cpp
-        content/17-10-08/694.cpp medium/421_BitManipulation_Trie.cpp medium/592_Math.cpp medium/343_Math_DP.cpp hard/lili.cpp
-        medium/357_Math_DP_Backtracking.cpp medium/445_LinkedList.cpp medium/498.cpp medium/22_String_Backtracking.cpp medium/539_String.cpp
-        medium/216_Array_Backtracking.cpp medium/554_Hashtable.cpp medium/144_Stack_Tree.cpp medium/486_DP_MiniMax.cpp medium/378_BinarySearch_Heap.cpp
-        medium/241_DivideandConquer.cpp medium/96_DP_Tree.cpp content/17-10-15/697.cpp content/17-10-15/696.cpp content/17-10-15/698.cpp
-        content/17-10-15/699.cpp medium/416_DP.cpp medium/318_BitManipulation.cpp medium/392_BinarySearch_DP_Greedy.cpp medium/423_Math.cpp
-        medium/230_BinarySearch_Tree.cpp medium/452_Greedy.cpp medium/583_String.cpp medium/650_DP.cpp medium/328_LinkedList.cpp
-        medium/337_Tree_Depth-firstSearch.cpp medium/287_Array_TwoPointers_BinarySearch.cpp medium/398_ReservoirSampling.cpp
-        medium/494_DP_DepthFirst-Search.cpp content/17-10-22/714.cpp content/17-10-22/712.cpp content/17-10-22/713.cpp content/17-10-22/715.cpp
-        hard/188_DP.cpp medium/309_DP.cpp medium/712_DP.cpp medium/524_TwoPoint_Sort.cpp medium/516_DP.cpp medium/377_DP.cpp easy/717.cpp easy/443.cpp
-        medium/718_Array_HashTable_BinarySearch_DP.cpp hard/719_Array_BinarySearch_Heap.cpp medium/173_Stack_Tree_Design.cpp
-        medium/78_Array_Backtracking_BitManipulation.cpp content/17-11-05/720.cpp content/17-11-05/721.cpp medium/341_Design_Stack.cpp
-        medium/386.cpp medium/394_Stack_Depth-first-Search.cpp medium/199_Tree_Depth-FirstSearch_Breadth-FirstSearch.cpp medium/435_Greedy.cpp
-        medium/436_BinarySearch.cpp content/17-11-19/728.cpp content/17-11-19/729.cpp content/17-11-19/731.cpp
-        niuke/IsBalancedTree.cpp niuke/Expression_Solution.cpp niuke/Hanoi_Problem.cpp niuke/Hanoi_Chk.cpp niuke/nodeCount.cpp content/17-11-26/733.cpp
-        content/17-11-26/734.cpp content/17-11-26/735.cpp niuke/stringMatching.cpp medium/611_Array.cpp medium/137_BitManipulation.cpp
-        easy/268_Array_Math_BitManipulation.cpp medium/142_LinkedList_TwoPoint.cpp hard/41_Array.cpp medium/399_Graph.cpp
+set(SOURCE_FILES main.cpp niuke/maxInWindows.cpp)
 
-        medium/102_Tree_Breadth-FirstSearch.cpp medium/103_Stack_Tree_Breadth-FirstSearch.cpp medium/692_HashTable_Heap_Trie.cpp content/17-12-03/739.cpp content/17-12-03/738.cpp content/17-12-03/740.cpp medium/737_Depth-firstSearch_UnionFind.cpp medium/560_Array_Map.cpp medium/523_Math_DP.cpp medium/713_Array_TwoPoint.cpp easy/53_Array_Divid-and-conquer_DP.cpp codeforce/4A_BruteForce_Math.cpp codeforce/1A_Math.cpp codeforce/71A_Strings.cpp "codeforce/158A_implementation .cpp" codeforce/118A_String.cpp codeforce/50A_Greedy_Math.cpp medium/402_Stack_Greedy.cpp medium/525_HashTable.cpp medium/48_Array.cpp medium/39_Array_Backtracking.cpp content/1.cpp content/17-12-10/744.cpp content/17-12-10/743.cpp content/17-12-10/742.cpp content/17-12-10/745.cpp medium/54_Array.cpp medium/59_Array.cpp medium/215_DividerandConquer_Heap.cpp medium/334.cpp medium/380_Array_HashTable_Design.cpp codeforce/17-12-23/A.cpp content/17-12-24/747.cpp content/17-12-24/752.cpp content/17-12-24/753.cpp content/17-12-24/751.cpp LiLi.cpp content/17-12-31/754.cpp content/17-12-31/755.cpp content/18-01-07/760.cpp content/18-01-07/758.cpp content/18-01-07/759.cpp content/18-01-14/762.cpp content/18-01-14/763.cpp content/18-01-14/765.cpp niuke/Mystring.cpp Pattern_Matching.cpp sort.cpp SStrcpy.cpp shiyanlou/smart.cpp shiyanlou/smart.h shiyanlou/dynamic.cpp shiyanlou/RTTI.h shiyanlou/RTTI.cpp shiyanlou/mm.cpp niuke/ArrayFind.cpp niuke/replaceSpace.cpp niuke/printListFromTailToHead.cpp niuke/reConstructBinaryTree.cpp niuke/minNumberInRotateArray.cpp niuke/rectCover.cpp niuke/Power.cpp niuke/reOrderArray.cpp niuke/FindKthToTail.cpp niuke/ReverseList.cpp niuke/MergeList.cpp niuke/VerifySquenceOfBST.cpp niuke/FindPath.cpp niuke/Clone.cpp niuke/MoreThanHalfNum_Solution.cpp niuke/GetLeastNumbers_Solution.cpp niuke/FindGreatestSumOfSubArray.cpp niuke/NumberOf1Between1AndN_Solution.cpp niuke/Convert.cpp niuke/Permutation.cpp niuke/PrintMinNumber.cpp niuke/GetUglyNumber_Solution.cpp niuke/FirstNotRepeatingChar.cpp niuke/InversePairs.cpp niuke/FindFirstCommonNode.cpp niuke/GetNumberOfK.cpp niuke/hasPath.cpp niuke/movingCount.cpp test.cpp shiyanlou/test2.cpp niuke/duplicate.cpp niuke/multiply.cpp niuke/match.cpp tool.cpp tool.h lintcode/sort.cpp niuke/EntryNodeOfLoop.cpp wangyi/1.cpp wangyi/2.cpp wangyi/3.cpp huawei/1.cpp huawei/2.cpp huawei/3.cpp ctrip/1.cpp ctrip/2.cpp ctrip/3.cpp gbit/1.cpp gbit/2.cpp 360/1.cpp 360/2.cpp second-Leetcode/1.cpp second-Leetcode/2.cpp second-Leetcode/4.cpp smartptr.h tool/Singleton.h tencent2018/1.cpp tencent2018/2.cpp tencent2018/3.cpp jd/1.cpp jd/2.cpp nengyuan/1.cpp nengyuan/2.cpp toutiao/1.cpp toutiao/2.cpp toutiao/4.cpp aaaa.cpp webank/1.cpp webank/2.cpp webank/3.cpp kuaishou/1.cpp kuaishou/2.cpp tool/myString.h wanmei/1.cpp wanmei/2.cpp the-art-of-programming/stringReverse.cpp ningmeng/1.cpp ningmeng/2.cpp ningmeng/3.cpp ningmeng/4.cpp Learn/Virtual_test.cpp)
 add_executable(leetcode ${SOURCE_FILES})
