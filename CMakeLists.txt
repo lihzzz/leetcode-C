@@ -13,6 +13,6 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp niuke/maxInWindows.cpp)
+set(SOURCE_FILES main.cpp niuke/NumberOf1Between1AndN_Solution.cpp niuke/FirstApper.cpp niuke/deleteDuplication.cpp niuke/GetTreeNext.cpp niuke/isSymmetrical.cpp niuke/PrintTree.cpp)
 
 add_executable(leetcode ${SOURCE_FILES})

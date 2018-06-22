@@ -36,4 +36,14 @@ struct Interval {
     Interval() : start(0), end(0) {}
     Interval(int s, int e) : start(s), end(e) {}
 };
+
+struct TreeLinkNode {
+    int val;
+    struct TreeLinkNode *left;
+    struct TreeLinkNode *right;
+    struct TreeLinkNode *next;
+    TreeLinkNode(int x) :val(x), left(NULL), right(NULL), next(NULL) {
+
+    }
+};
 #endif //LEETCODE_DATASTRUCT_H

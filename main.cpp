@@ -7,7 +7,7 @@
 //#include "content/18-01-14/765.cpp"
 //#include "LiLi.cpp"
 #include "lintcode/sort.cpp"
- #include "niuke/maxInWindows.cpp"
+ #include "niuke/NumberOf1Between1AndN_Solution.cpp"
 //#include "medium/334.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
@@ -36,7 +36,7 @@ int main() {
     string t ="abcXYZdef";
 
     Solution sl;
-    sl.maxInWindows(nums,3);
+    cout << sl.NumberOf1Between1AndN_Solution(13);
 //    TreeNode* root = new TreeNode(10);
 //    TreeNode* a = new TreeNode(5);
 //    TreeNode* b = new TreeNode(12);
