@@ -13,6 +13,8 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp niuke/NumberOf1Between1AndN_Solution.cpp niuke/FirstApper.cpp niuke/deleteDuplication.cpp niuke/GetTreeNext.cpp niuke/isSymmetrical.cpp niuke/PrintTree.cpp)
+set(SOURCE_FILES main.cpp niuke/NumberOf1Between1AndN_Solution.cpp niuke/FirstApper.cpp
+        niuke/deleteDuplication.cpp niuke/GetTreeNext.cpp niuke/isSymmetrical.cpp niuke/PrintTree.cpp niuke/HasSubtree.cpp
+        "LeetCode/third/455. Assign Cookies.cpp" "LeetCode/third/435. Non-overlapping Intervals .cpp" "LeetCode/third/452. Minimum Number of Arrows to Burst Balloons .cpp" "LeetCode/third/406. Queue Reconstruction by Height .cpp")
 
 add_executable(leetcode ${SOURCE_FILES})
