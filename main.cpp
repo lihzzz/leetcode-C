@@ -7,7 +7,7 @@
 //#include "content/18-01-14/765.cpp"
 //#include "LiLi.cpp"
 #include "lintcode/sort.cpp"
-#include "LeetCode/third/combinationSum.cpp"
+#include "LeetCode/third/Letter Combinations of a Phone Number.cpp"
 //#include "Datastruct/stackAndQueue/reverseBetween.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
 //#include "niuke/Hanoi_Problem.cpp"
@@ -27,7 +27,7 @@ int main() {
     t4->next = t5;
 
 
-    vector<int> nums = {2,3,6,7};
+    vector<int> nums = {1,0,-1};
 
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,2,5},{3,2,1}};
@@ -36,7 +36,7 @@ int main() {
     string t ="abcXYZdef";
 
     Solution sl;
-    sl.combinationSum(nums,7);
+    sl.letterCombinations("23");
 //    TreeNode* root = new TreeNode(10);
 //    TreeNode* a = new TreeNode(5);
 //    TreeNode* b = new TreeNode(12);
