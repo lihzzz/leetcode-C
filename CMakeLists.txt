@@ -25,6 +25,6 @@ set(SOURCE_FILES main.cpp niuke/NumberOf1Between1AndN_Solution.cpp niuke/FirstAp
         "LeetCode/third/Longest Increasing Subsequence .cpp" "LeetCode/third/Longest Uncommon Subsequence I.cpp"
         "LeetCode/third/Interleaving String.cpp" "LeetCode/third/Longest Consecutive Sequence.cpp"
         LeetCode/third/N-Queens.cpp LeetCode/third/subsets.cpp LeetCode/third/Subsets2.cpp LeetCode/third/Permutations.cpp
-        LeetCode/third/Combinations.cpp "LeetCode/third/Letter Combinations of a Phone Number.cpp" "LeetCode/third/Word Ladder.cpp")
+        LeetCode/third/Combinations.cpp "LeetCode/third/Letter Combinations of a Phone Number.cpp" "LeetCode/third/Word Ladder.cpp" "LeetCode/third/Word Ladder II.cpp" "LeetCode/third/Surrounded Regions.cpp" "LeetCode/third/Path Sum II.cpp" "LeetCode/third/Palindrome Partitioning.cpp" "LeetCode/third/Unique Paths.cpp" "LeetCode/third/Unique Paths II.cpp")
 
 add_executable(leetcode ${SOURCE_FILES})
