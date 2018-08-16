@@ -6,13 +6,23 @@
 #include "tool/tool.h"
 //#include "content/18-01-14/765.cpp"
 //#include "LiLi.cpp"
-#include "lintcode/sort.cpp"
-#include "LeetCode/third/Unique Paths II.cpp"
+//#include "lintcode/sort.cpp"
+#include "work2018/KMP.cpp"
+//#include "LeetCode/third/Unique Paths II.cpp"
 //#include "Datastruct/stackAndQueue/reverseBetween.cpp"
 //#include "hard/719_Array_BinarySearch_Heap.cpp"
-//#include "niuke/Hanoi_Problem.cpp"
+//#include "niuke/maxInWindows.cpp"
+
 using namespace std;
 
+template <typename T>
+void printer(vector<T> data){
+    int size = data.size();
+    for (int i = 0; i < size ; ++i) {
+        cout << data[i] << " ";
+    }
+    cout << endl;
+}
 
 int main() {
     //Solution sl;
@@ -27,16 +37,17 @@ int main() {
     t4->next = t5;
 
 
-    vector<int> nums = {1,0,-1};
+    vector<int> nums = {5,4,3,2,1};
 
     //vector<int> nums2 = {2,30};
     vector<vector<int>> nums2={{1,0}};
     //nums.push_back(data);
     vector<string> strs = {"measure","other","every","base","according","level","meeting","none","marriage","rest"};
-    string t ="abcXYZdef";
+    string t ="mississippi";
 
     Solution sl;
-    cout << sl.uniquePathsWithObstacles(nums2);
+    vector<int> prefix(t.length(),0);
+    sl.strStr(t,"issip");
 //    TreeNode* root = new TreeNode(10);
 //    TreeNode* a = new TreeNode(5);
 //    TreeNode* b = new TreeNode(12);

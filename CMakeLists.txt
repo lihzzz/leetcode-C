@@ -14,17 +14,10 @@ project(leetcode)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp niuke/NumberOf1Between1AndN_Solution.cpp niuke/FirstApper.cpp
-        niuke/deleteDuplication.cpp niuke/GetTreeNext.cpp niuke/isSymmetrical.cpp niuke/PrintTree.cpp niuke/HasSubtree.cpp
-        "LeetCode/third/455. Assign Cookies.cpp" "LeetCode/third/435. Non-overlapping Intervals .cpp"
-        "LeetCode/third/452. Minimum Number of Arrows to Burst Balloons .cpp" "LeetCode/third/406. Queue Reconstruction by Height .cpp"
-        "LeetCode/third/763. Partition Labels .cpp"
-        LeetCode/third/605.canPlaceFlowers.cpp LeetCode/third/392.isSubsequence.cpp
-        LeetCode/third/665.checkPossibility.cpp Datastruct/stackAndQueue/stackReverse.cpp
-        Datastruct/stackAndQueue/getMaxWindow.cpp Datastruct/stackAndQueue/removeNthFromEnd.cpp Datastruct/stackAndQueue/reverseBetween.cpp
-        Datastruct/stackAndQueue/tmp.cpp lintcode/maxPathSum.cpp LeetCode/third/minPathSum.cpp LeetCode/third/combinationSum.cpp
-        "LeetCode/third/Longest Increasing Subsequence .cpp" "LeetCode/third/Longest Uncommon Subsequence I.cpp"
-        "LeetCode/third/Interleaving String.cpp" "LeetCode/third/Longest Consecutive Sequence.cpp"
-        LeetCode/third/N-Queens.cpp LeetCode/third/subsets.cpp LeetCode/third/Subsets2.cpp LeetCode/third/Permutations.cpp
-        LeetCode/third/Combinations.cpp "LeetCode/third/Letter Combinations of a Phone Number.cpp" "LeetCode/third/Word Ladder.cpp" "LeetCode/third/Word Ladder II.cpp" "LeetCode/third/Surrounded Regions.cpp" "LeetCode/third/Path Sum II.cpp" "LeetCode/third/Palindrome Partitioning.cpp" "LeetCode/third/Unique Paths.cpp" "LeetCode/third/Unique Paths II.cpp")
+        "LeetCode/third/Restore IP Addresses.cpp" niuke/InversePairs.cpp LeetCode/third/reversePairs.cpp
+        niuke/maxInWindows.cpp niuke/FirstAppearingOnce.cpp niuke/GetMedian.cpp niuke/again_1/TreeDepth.cpp
+        niuke/again_1/IsBalanced_Solution.cpp niuke/again_1/FindNumsAppearOnce.cpp niuke/again_1/FindContinuousSequence.cpp
+        common_header.h test.cpp
+         work2018/sort/SelectSort.cpp work2018/sort/BubbleSort.cpp work2018/sort/InsertSort.cpp work2018/sort/MergeSort.cpp  work2018/sort/HeapSort.cpp work2018/sort/QuickSort.cpp work2018/sort/shellSort.cpp work2018/KMP.cpp work2018/climbStairs.cpp "work2018/House Robber.cpp")
 
 add_executable(leetcode ${SOURCE_FILES})

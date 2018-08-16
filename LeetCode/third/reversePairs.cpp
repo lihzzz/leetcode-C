@@ -1,15 +1,18 @@
 //
+// Created by lihzz on 2018/7/19.
+//
+
+//
 // Created by lh on 2018/3/20.
 //
 #include <vector>
 #include <iostream>
-#include "../tool/tool.h"
 using namespace std;
 
 
 class Solution {
 public:
-    int InversePairs(vector<int> data) {
+    int reversePairs(vector<int> data) {
         if(data.empty() || data.size()<2){
             return 0;
         }
@@ -19,13 +22,16 @@ public:
     }
 
     int Inverse(vector<int> data,int start,int end){
-        if(start==end){
+        if(start<end)
+        {
+            int mid = start + ((end-start)>>1);
+            int leftcount = Inverse(data,start,mid)%1000000007;
+            int rightcount = Inverse(data,mid+1,end)%1000000007;
+            return (leftcount+rightcount+merge(data,start,mid,end))%1000000007;
+        }else{
             return 0;
         }
-        int mid = start + ((end-start)>>1);
-        int leftcount = Inverse(data,start,mid)%1000000007;
-        int rightcount = Inverse(data,mid+1,end)%1000000007;
-        return (leftcount+rightcount+merge(data,start,mid,end))%1000000007;
+
     }
 
     int merge(vector<int> data,int start,int mid,int end){
@@ -51,8 +57,8 @@ public:
         while(p2<=end){
             help[i++] = data[p2++];
         }
-
-        for (int j = 0; j <help.size() ; ++j) {
+        int size = help.size();
+        for (int j = 0; j < size ; ++j) {
             data[start+j] = help[j];
         }
         return res;
