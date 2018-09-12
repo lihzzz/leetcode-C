@@ -14,6 +14,6 @@ project(leetcode)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp
-         work/dianxin/1.cpp work/dianxin/2.cpp work/dianxin/3.cpp hdu/1.cpp)
+         test.cpp)
 
 add_executable(leetcode ${SOURCE_FILES})
