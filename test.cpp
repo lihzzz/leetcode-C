@@ -13,7 +13,7 @@ public:
 };
 
 
-int main(){
-    cout << sizeof(Base1);
-}
+//int main(){
+//    cout << sizeof(Base1);
+//}
 

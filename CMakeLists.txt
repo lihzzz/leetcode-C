@@ -14,6 +14,6 @@ project(leetcode)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp
-         test.cpp "LeetCode/hard/146. LRU Cache.cpp")
+         test.cpp "LeetCode/hard/146. LRU Cache.cpp" work/xunlei/1.cpp work/xunlei/2.cpp work/huawei/2.cpp)
 
 add_executable(leetcode ${SOURCE_FILES})
