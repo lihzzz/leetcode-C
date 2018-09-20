@@ -38,37 +38,37 @@ void getPath(vector<vector<int>>& path,int i,int j,vector<int>&res){
     }
 }
 
-int main(){
-    vector<vector<int>> Cost(N,vector<int>(N,INT_MAX));
-    vector<vector<int>> path(N,vector<int>(N,0));
-    vector<int> res;
-    char start,end;
-    cin >> start >> end;
-    getchar();
-    string str;
-    int num = end - 'a';
-    for (int i = 0; i < num; ++i) {
-        getline(cin,str);
-        istringstream is(str);
-        char node;
-        char tmp;
-        char dis;
-        is >> node;
-        while(is>>tmp){
-            is >> dis;
-            Cost[node-'a'][tmp-'a'] = dis-'0';
-        }
-    }
-    Floyd(Cost,path,num+1,0,num+1);
-    getPath(path,0,num,res);
-    cout << 'a' << " ";
-    for (size_t j = 0; j < res.size(); ++j) {
-        cout << static_cast<char>(res[j]+'a');
-        if(j!=res.size()-1){
-            cout << " ";
-        }
-    }
-    cout << endl;
-    cout << Cost[0][num];
-    return 0;
-}
+//int main(){
+//    vector<vector<int>> Cost(N,vector<int>(N,INT_MAX));
+//    vector<vector<int>> path(N,vector<int>(N,0));
+//    vector<int> res;
+//    char start,end;
+//    cin >> start >> end;
+//    getchar();
+//    string str;
+//    int num = end - 'a';
+//    for (int i = 0; i < num; ++i) {
+//        getline(cin,str);
+//        istringstream is(str);
+//        char node;
+//        char tmp;
+//        char dis;
+//        is >> node;
+//        while(is>>tmp){
+//            is >> dis;
+//            Cost[node-'a'][tmp-'a'] = dis-'0';
+//        }
+//    }
+//    Floyd(Cost,path,num+1,0,num+1);
+//    getPath(path,0,num,res);
+//    cout << 'a' << " ";
+//    for (size_t j = 0; j < res.size(); ++j) {
+//        cout << static_cast<char>(res[j]+'a');
+//        if(j!=res.size()-1){
+//            cout << " ";
+//        }
+//    }
+//    cout << endl;
+//    cout << Cost[0][num];
+//    return 0;
+//}
